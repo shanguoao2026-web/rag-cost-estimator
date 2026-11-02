@@ -1,0 +1,16 @@
+{
+  "name": "rag-cost-estimator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Estimate RAG chatbot token costs using user-supplied prices",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node tests/estimator.test.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}

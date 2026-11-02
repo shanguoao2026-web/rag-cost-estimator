@@ -1,0 +1,16 @@
+{
+  "_note": "EXAMPLE prices only, in USD per 1 million tokens. Not actual provider prices. Check provider pricing pages before quoting.",
+  "queriesPerDay": 100,
+  "daysPerMonth": 30,
+  "avgQuestionTokens": 100,
+  "retrievedChunks": 3,
+  "tokensPerChunk": 250,
+  "systemPromptTokens": 150,
+  "avgAnswerTokens": 200,
+  "initialIngestTokens": 1000000,
+  "monthlyReindexTokens": 100000,
+  "models": [
+    { "name": "EXAMPLE standard", "inputPerMillion": 1, "outputPerMillion": 2, "embeddingPerMillion": 0.1 },
+    { "name": "EXAMPLE budget", "inputPerMillion": 0.5, "outputPerMillion": 1, "embeddingPerMillion": 0.05 }
+  ]
+}
