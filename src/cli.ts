@@ -13,7 +13,7 @@ function table(result: Estimate): string {
     money(m.monthlyReindexCost), money(m.monthlyCost), money(m.oneOffIngestCost),
     money(m.suggestedMonthlyQuote), money(m.suggestedIngestQuote), money(m.suggestedFirstMonthQuote),
   ]);
-  const headers = [...(result.compared ? ['Rank'] : []), 'Model', 'Input/query', 'Output/query', 'Total/query', 'Cost/query', 'Daily queries', 'Monthly input', 'Monthly output', 'Re-index', 'Monthly total', 'One-off ingest', 'Monthly quote', 'Ingest quote', 'First month quote'];
+  const headers = [...(result.compared ? ['Rank'] : []), 'Model', 'Input/query', 'Output/query', 'Total/query', 'Cost/query', 'Daily cost', 'Monthly input', 'Monthly output', 'Re-index', 'Monthly total', 'One-off ingest', 'Monthly quote', 'Ingest quote', 'First month quote'];
   const widths = headers.map((h, i) => Math.max(h.length, ...rows.map(row => row[i]!.length)));
   const format = (row: string[]) => row.map((cell, i) => cell.padEnd(widths[i]!)).join(' | ');
   return [`USD · ${result.daysPerMonth} days/month · ${result.queriesPerDay} queries/day · ${(result.margin * 100).toFixed(2)}% gross margin`, format(headers), widths.map(w => '-'.repeat(w)).join('-+-'), ...rows.map(format), 'Monthly total includes re-indexing. Daily cost covers queries only. First month quote includes initial ingest.'].join('\n');
